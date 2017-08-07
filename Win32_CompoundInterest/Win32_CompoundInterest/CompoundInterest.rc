@@ -1,0 +1,40 @@
+#include "resource.h"
+#include <windows.h>
+
+//---------------------------------------------------------------------------
+// Dialog
+
+IDD_MAIN_DLG DIALOGEX 200, 100, 329, 132
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+WS_SYSMENU
+CAPTION "Compound Interest"
+FONT 8, "MS Shell Dlg" // , 400, 0, 0x1
+BEGIN
+GROUPBOX        "Preparation", IDC_STATIC, 6, 6, 156, 72
+LTEXT           "Principal: ...............", IDC_STATIC, 18, 21, 72, 8
+EDITTEXT        IDC_PRINCIPAL, 90, 18, 40, 12, ES_RIGHT | ES_AUTOHSCROLL
+LTEXT           "Interest: ...............", IDC_STATIC, 18, 40, 72, 8
+EDITTEXT        IDC_ANNUAL_RATE, 90, 36, 40, 12, ES_RIGHT | ES_AUTOHSCROLL
+LTEXT           "Number of Periods: ...", IDC_STATIC, 18, 58, 72, 8
+EDITTEXT        IDC_NBR_OF_PERIODS, 90, 54, 40, 12, ES_RIGHT | ES_AUTOHSCROLL
+LTEXT           "%", IDC_STATIC, 132, 42, 8, 8
+LTEXT           "years", IDC_STATIC, 132, 54, 19, 8
+GROUPBOX        "Compound Frequency", IDC_STATIC, 168, 6, 90, 72
+CONTROL         "Monthly", IDC_COMPOUND, "Button", BS_AUTORADIOBUTTON |
+BS_LEFTTEXT | WS_GROUP, 180, 20, 60, 10
+PUSHBUTTON      "Calculate", IDC_CALCULATE_BTN, 270, 9, 50, 14
+PUSHBUTTON      "Close", IDCANCEL, 270, 30, 50, 14
+CONTROL         "Quarterly", IDC_QUATERLY, "Button", BS_AUTORADIOBUTTON |
+BS_LEFTTEXT, 180, 33, 60, 10
+CONTROL         "Semiannually", IDC_SEMIANNUALLY, "Button",
+BS_AUTORADIOBUTTON | BS_LEFTTEXT, 180, 46, 60, 10
+CONTROL         "Annually", IDC_ANNUALLY, "Button", BS_AUTORADIOBUTTON |
+BS_LEFTTEXT, 180, 59, 60, 10
+GROUPBOX        "Results", IDC_STATIC, 6, 84, 252, 36
+LTEXT           "Interest Earned:", IDC_STATIC, 15, 99, 54, 8
+EDITTEXT        IDC_INTEREST_EARNED, 78, 96, 52, 12, ES_RIGHT |
+ES_AUTOHSCROLL
+LTEXT           "Amount Earned:", IDC_STATIC, 144, 99, 53, 8
+EDITTEXT        IDC_AMOUNT_EARNED, 198, 96, 48, 12, ES_RIGHT | ES_AUTOHSCROLL
+END
+//---------------------------------------------------------------------------

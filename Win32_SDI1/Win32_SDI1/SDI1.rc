@@ -1,0 +1,26 @@
+
+#include "Resource.h"
+#include <windows.h>
+
+// Main Menu
+IDR_MAIN_MENU MENU
+BEGIN
+	POPUP "&File"
+		BEGIN
+			MENUITEM "E&xit", IDM_FILE_EXIT
+		END
+	POPUP "&Help"
+		BEGIN
+			MENUITEM "&About...", IDM_HELP_ABOUT
+		END
+END
+
+// Dialog Box: About
+IDD_ABOUTDLGBOX DIALOGEX 0, 0, 184, 81
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
+WS_SYSMENU
+CAPTION "About SDI1"
+FONT 8, "MS Shell Dlg"
+BEGIN
+	DEFPUSHBUTTON   "OK", IDOK, 127, 7, 50, 16, WS_GROUP
+END

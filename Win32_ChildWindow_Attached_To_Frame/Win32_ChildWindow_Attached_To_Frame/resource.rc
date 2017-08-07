@@ -1,0 +1,44 @@
+#include "resource.h"
+#include <windows.h>
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TOOLBOX_DLG DIALOG DISCARDABLE  0, 0, 86, 249
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "E&xit", IDM_FILE_EXIT
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbox", IDM_VIEW_TOOLBOX, CHECKED
+	END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDM_FILE_EXIT           "Closes the application"
+	IDM_VIEW_TOOLBOX        "Toggles the presence and disappearance of the toolbox\nShow/Hide Toolbox"
+END
+
+//#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////

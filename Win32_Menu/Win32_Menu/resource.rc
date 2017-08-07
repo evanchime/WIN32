@@ -1,0 +1,51 @@
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "E&xit", IDM_FILE_EXIT
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About...\tF1", IDM_HELP_ABOUT
+	END
+END
+
+IDR_POPUP MENU
+BEGIN
+	POPUP "_POPUP_"
+	BEGIN
+		MENUITEM "&Small", IDM_SMALL
+		MENUITEM "&Medium", IDM_MEDIUM
+		MENUITEM "&Large", IDM_LARGE
+		MENUITEM SEPARATOR
+		MENUITEM "&Jumbo", IDM_JUMBO
+	END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+	IDM_FILE_EXIT           "Closes the application\nClose"
+	IDM_SMALL               "Selects a small pizza"
+	IDM_MEDIUM              "Selects a medium pizza"
+	IDM_LARGE               "Makes up a large pizza"
+	IDM_JUMBO               "Builds an extra-large pizza"
+	IDM_HELP_ABOUT          "About this application" 
+END
+
+STRINGTABLE
+BEGIN
+	IDS_APP_NAME            "MenuApplied"
+END

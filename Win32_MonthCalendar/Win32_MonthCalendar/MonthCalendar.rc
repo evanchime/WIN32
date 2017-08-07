@@ -1,0 +1,12 @@
+#include "resource.h"
+#include <afxres.h>
+
+IDD_CONTROLSDLG DIALOG 260, 200, 260, 150
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Windows Controls"
+FONT 8, "MS Shell Dlg"
+BEGIN
+	DEFPUSHBUTTON   "Close", IDCANCEL, 202, 14, 50, 14
+	CONTROL         "", IDC_MONTHCALENDAR, "SysMonthCal32",
+	WS_CHILD | WS_TABSTOP, 10, 10, 118, 96
+END

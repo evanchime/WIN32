@@ -1,0 +1,15 @@
+#include "resource.h"
+#include <Windows.h>
+
+IDD_WAKEMEUP_DLG DIALOG DISCARDABLE  200, 100, 200, 100
+STYLE WS_POPUP | WS_CAPTION | WS_VISIBLE | WS_SYSMENU
+CAPTION "Wake Me Up"
+FONT 8, "MS Sans Serif"
+BEGIN
+	DEFPUSHBUTTON      "Snooze", IDCANCEL, 10, 32, 80, 23
+	PUSHBUTTON         "Set", IDC_SET_BTN, 95, 32, 80, 23
+	LTEXT              "Wake me up at:", IDC_STATIC, 10, 10, 52, 8
+	CONTROL            "DTP1", IDC_TIMETOWAKEUP, "SysDateTimePick32",
+	DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,
+	70, 10, 65, 15
+END

@@ -1,0 +1,3 @@
+#pragma once
+#define IDD_PRIMARYFAMILY_DLG 1012
+#define IDC_PRIMARYFAMILY_LB  1014

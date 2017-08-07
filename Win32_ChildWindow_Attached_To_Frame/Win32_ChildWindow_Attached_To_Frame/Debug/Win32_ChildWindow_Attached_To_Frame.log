@@ -1,0 +1,5 @@
+﻿  Exercise.cpp
+c:\users\evanc\documents\visual studio 2017\projects\win32_childwindow_attached_to_frame\win32_childwindow_attached_to_frame\exercise.cpp(20): warning C4101: 'rect': unreferenced local variable
+c:\users\evanc\documents\visual studio 2017\projects\win32_childwindow_attached_to_frame\win32_childwindow_attached_to_frame\exercise.cpp(93): warning C4101: 'MenuItem': unreferenced local variable
+  Win32_ChildWindow_Attached_To_Frame.vcxproj -> c:\users\evanc\documents\visual studio 2017\Projects\Win32_ChildWindow_Attached_To_Frame\Debug\Win32_ChildWindow_Attached_To_Frame.exe
+  Win32_ChildWindow_Attached_To_Frame.vcxproj -> c:\users\evanc\documents\visual studio 2017\Projects\Win32_ChildWindow_Attached_To_Frame\Debug\Win32_ChildWindow_Attached_To_Frame.pdb (Partial PDB)

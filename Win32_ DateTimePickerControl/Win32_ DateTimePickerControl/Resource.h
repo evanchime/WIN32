@@ -1,0 +1,3 @@
+#pragma once
+#define IDD_EXERCISE_DLG 1010
+#define IDC_DATETIMEPICKER 2012

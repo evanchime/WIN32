@@ -1,0 +1,3 @@
+#pragma once
+#define IDD_CONTROLSDLG 101
+#define IDC_MONTHCALENDAR 102
