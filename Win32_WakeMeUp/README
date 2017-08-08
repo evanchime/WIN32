@@ -1,0 +1,2 @@
+In this exercise, we create an application that behaves like a clock radio. 
+We use an MCI function to play a CD when a set time has occurred.
