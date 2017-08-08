@@ -1,0 +1,1 @@
+Implementing a window as a class

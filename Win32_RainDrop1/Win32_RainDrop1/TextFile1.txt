@@ -1,0 +1,38 @@
+TBADDBITMAP tbAddBitmap;
+	tbAddBitmap.hInst = hInstance;
+	tbAddBitmap.nID = IDB_STANDARD;
+
+	// Create the toolbar.
+	HWND hWndToolbar = CreateWindowEx(0, TOOLBARCLASSNAME, NULL,
+		/*WS_CHILD | TBSTYLE_WRAPABLE*/WS_VISIBLE | WS_CHILD | WS_BORDER, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
+		hWnd, NULL, hInst, NULL);
+
+	if (hWndToolbar == NULL)
+		return NULL;
+
+	const int numButtons = 7;
+
+	int stdidx = SendMessage(hWndToolbar, TB_ADDBITMAP, numButtons, (LPARAM)&tbAddBitmap);
+
+	TBBUTTON tbrButtons[numButtons] =
+	{
+		{ stdidx + 0, IDM_FILE_NEW, TBSTATE_ENABLED, BTNS_BUTTON },
+		{ stdidx + 1, IDM_FILE_OPEN, TBSTATE_ENABLED, BTNS_BUTTON },
+		{ stdidx + 2, IDM_FILE_SAVE, TBSTATE_ENABLED, BTNS_BUTTON },
+		{ stdidx + 3,  IDM_FILE_PRINT, TBSTATE_ENABLED, BTNS_BUTTON },
+		{ stdidx + 4, IDM_DRAW_ARROW, TBSTATE_ENABLED, BTNS_BUTTON },
+		{ stdidx + 5, IDM_DRAW_FREEHAND, TBSTATE_ENABLED, BTNS_BUTTON },
+		{ stdidx + 6, 0, TBSTATE_ENABLED, BTNS_SEP },
+	};
+
+
+	// Add buttons.
+	SendMessage(hWndToolbar, TB_BUTTONSTRUCTSIZE, (WPARAM)sizeof(TBBUTTON), 0);
+	SendMessage(hWndToolbar, TB_ADDBUTTONS, (WPARAM)numButtons, (LPARAM)tbrButtons);
+
+	// Resize the toolbar, and then show it.
+	SendMessage(hWndToolbar, TB_AUTOSIZE, 0, 0);
+
+	if (hWndToolbar == NULL)
+		return NULL;
+	return hWndToolbar;
