@@ -1,0 +1,8 @@
+Simulates sales of items in a department store or any other store. Customers take such an item to the cashier who rings it, applies the tax rate and present the total price to the customer.
+The marked price, the price presented on an item, is in currency value. In this example, it would be $120.95
+The tax rate is expressed as a percentage value. An example would be 5.75%
+The computer used to evaluate the price use a formula such as:
+Tax Amount = Marked Price / Tax Rate
+The net price, the actual price a customer should pay, is calculated as:
+Net Price = Marked Price + Tax Amount 
+Prerequisites:Dialog Boxes, Static Text Control
